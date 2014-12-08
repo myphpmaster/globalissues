@@ -435,11 +435,15 @@ function update_city(){
 				$( "#weather" ).html(content);
 			  });
 			  
+			for(var i=0, len=results[0].address_components.length; i<len; i++) {
+				var ac = results[0].address_components[i];
+				if(ac.types.indexOf("country") >= 0) mycountry = ac.long_name;
+			}
 			// Updating Economic section
 			$.ajax({
 			  type: "POST",
 			  url: "ajax.php",
-			  data: { action: "economic", mycity: city, country: 'MYS' }
+			  data: { action: "economic", mycity: city, country: mycountry }
 			})
 			  .done(function( content ) {
 				$( "#economic" ).html(content);

@@ -1,7 +1,22 @@
 <?php
 
-$ctry_code = isset($_POST['country']) ? $_POST['country'] : 'MYS';
+$ctry_name = isset($_POST['country']) ? $_POST['country'] : $json_loc->body->country;
 $current_city = isset($_POST['mycity']) ? $_POST['mycity'] : $current_city;
+
+$countries = direct_json("country",array('format'=>'json','per_page'=>'262'));
+// checking ($countries);
+
+foreach($countries[1] as $data){
+	if($data->name==$ctry_name){
+		$ctry_code = $data->id;
+		break;
+	}
+}
+
+if(!isset($ctry_code)){
+	$ctry_code = 'MYS';
+	$notice = true;
+}
 
 $quandls = array('gdppc','gdpgro','cpi','pop','unemp');
 $quandls_datas = array();
@@ -28,7 +43,11 @@ $quandls_title = array(
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Economic</h2>
-                    <h3 class="section-subheading text-muted">Some economic report for <strong><span class="mycountry"><?php echo $current_loc['country']; ?></span></strong>, the country of <span class="mycity"><?php echo str_replace(', '.$current_loc['country'],'',$current_city); ?></span>.</h3>
+                    <?php if (isset($notice)&& $notice): ?>
+                    <h3 class="section-subheading text-muted">No economic report for the country where <span class="mycity"><?php echo str_replace(', '.$ctry_name,'',$current_city); ?></span> is. We displayed Malaysia data as replacement.</h3>
+                    <?php else: ?>
+                    <h3 class="section-subheading text-muted">Some economic report for the country where <span class="mycity"><?php echo str_replace(', '.$ctry_name,'',$current_city); ?></span> is.</h3>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="row">
