@@ -1,0 +1,171 @@
+a,
+a:hover { 
+	color: blue;  
+}
+.navbar-default {
+	background: #222;
+}
+.navbar-default.navbar-shrink {
+	opacity: 0.9;
+}
+.navbar-default .navbar-nav>.active>a {
+	background: #fed136;
+}
+.intro-city {margin-bottom: 10px;}
+#geocity {
+	width: 50%;
+	padding: 10px;
+	color: #000;
+	text-align: center;
+}
+#eqnotice {
+	width: 50%;
+	margin: 0 auto;
+}
+#eqlegend {
+	margin: 10px;
+	background: rgba(255, 255, 255, 0.78);
+}
+#eqlegend .hide_show {
+	padding: 5px 25px;
+	background: rgba(112, 192, 229, 0.85);
+}
+#eqlegend .table {
+	margin-bottom: 0;
+	display: none;
+}
+.ui-menu .ui-menu-item a,
+.ui-menu .ui-menu-item a.ui-state-hover, 
+.ui-menu .ui-menu-item a.ui-state-active {
+	font-weight: normal;
+	margin: -1px;
+	font-size:14px;
+	}
+.ui-autocomplete-loading { 
+	background: white url("http://www.geobytes.com/images/ui-anim_basic_16x16.gif") right center no-repeat; 
+}
+
+#map-canvas{
+    	width: 100%;
+    	height: 520px;
+    	margin: 0 auto;
+}
+#places_nearby .item {
+	margin-bottom: 10px;
+}
+#places_nearby .item .wrap {
+	margin: 5px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	background: #ddd;
+}
+#todayweather {
+	width: 400px;
+	margin: 0 auto;
+}
+#todayweather .cloud,
+#todayweather .other {
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+}
+#todayweather .cloud {
+	width: 30%;
+}
+#todayweather .other {
+	width: 60%;
+}
+#todayweather .cloud .temp {
+	display: block;
+	font-size: 60px;
+	line-height: 50px;
+}
+#todayweather .cloud .temp sup {
+	font-size: 20px;
+}
+#todayweather .other li {
+	list-style: none;
+	text-align: left;
+}
+#weather_forecast {
+	width: 900px;
+	margin: 0 auto;	
+}
+#weather_forecast ul {
+	padding-left: 0;
+}
+#weather_forecast ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 10px;
+	border: 1px solid #ddd;
+	padding: 10px;
+	border: 1px solid #ddd;
+	background: #ccc;
+	margin-right: 10px;
+	border-radius: 10px;
+	float: left;
+	width: 100px;
+	margin-bottom: 10px;
+}
+#weather_forecast ul li.newday {
+	clear: left;
+}
+#weather_forecast .title {
+	color: #fff;
+}
+header {
+	background-image: url(new_bg.jpg);
+}
+section .tab-pane h3.section-subheading {
+	margin-bottom: 10px;
+}
+#twitpost li {
+	list-style: none;
+	display: inline-block;
+	min-width: 200px;
+	padding: 10px 30px;
+	margin: 5px;
+	background: #55acee;
+}
+#twitpost li a {
+	color: #fff;
+}
+/* Large desktop */
+@media (min-width: 1200px) { 
+
+
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+
+
+}
+@media (min-width: 768px){
+	header .intro-text {
+		padding-top: 200px;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+	#eqnotice,
+	#geocity {
+		width: 75%;
+	}
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+	#eqnotice,
+	#geocity {
+		width: 90%;
+	}
+
+
+
+}
