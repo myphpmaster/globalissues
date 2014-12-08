@@ -1,6 +1,6 @@
 Global Issues
 ============
 
-Koding global hackathon source code..
+Koding global hackathon source code for myPHPmaster entry. V
 
-to be updated
+View website at http://myphpmaster.koding.io/globalissues/
